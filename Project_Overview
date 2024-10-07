@@ -1,0 +1,5 @@
+Project title:- Real-Time Waste Classification for Smart Bins
+
+1. Data Collection: I gather images of waste for 29 different categories, with around 700-1200 images per category.
+
+Next Steps: Preprocessing the dataset, ensuring balance, and augmenting if necessary for model generalization.
