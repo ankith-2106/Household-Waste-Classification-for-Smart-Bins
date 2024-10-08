@@ -1,4 +1,4 @@
-Project title:- Real-Time Waste Classification for Smart Bins
+Project title:- Waste Classification for Smart Bins
 
 1. Data Collection
 
@@ -36,7 +36,7 @@ Project title:- Real-Time Waste Classification for Smart Bins
   
     Next Steps: Preprocessing the dataset, ensuring that the images of each categories have correct images. Secondly removing any 
                 dodgy images and thirdly removing all those images whose size is less than 5 kb.
-                images with extension like "jpeg", "jpg", "bmp" and "png" were only selected for training process.
+                Images with extension like "jpeg", "jpg", "bmp" and "png" were only selected for training process.
 
 2. Data Preprocessing
 
@@ -48,9 +48,10 @@ Project title:- Real-Time Waste Classification for Smart Bins
 
 3. Model Selection and Training
 
-    Base Model: I choose MobileNetV2, reason being lightweight and optimized for resource-constrained environments like smart bins. Pre-trained on ImageNet, 
-                which can be fine-tuned on my waste classification dataset, it is a lightweight model that balances accuracy and speed. The base model's layers are frozen 
-                to prevent updating pre-trained weights. Custom layers (global average pooling, dense, and dropout) are added for classification.
+    Base Model: I choose MobileNetV2, reason being MobileNetV2 is lightweight and it is an advanced deep learning architecture designed for efficient image recognition
+                and classification tasks. Pre-trained on ImageNet, which can be fine-tuned on my waste classification dataset, it is a lightweight model that 
+                balances accuracy and speed. The base model's layers are frozen to prevent updating pre-trained weights. Custom layers (global average pooling, 
+                dense, and dropout) are added for classification.
 
     Custom Layers: Added a GlobalAveragePooling2D layer to reduce the dimensionality. Added a Dense(512, relu) layer for classification. Added a Dropout layer 
                    to mitigate overfitting. Final Dense layer outputs 29 categories using a softmax activation function.
@@ -64,5 +65,16 @@ Project title:- Real-Time Waste Classification for Smart Bins
 
     Validation: I am using a validation set during training, this ensures that the model is evaluated on unseen data after each epoch, helping me to monitor its ability to generalize.
 
-    Performance: The balance between inference time and accuracy is crucial for my real-time system. While the MobileNetV2 architecture is optimized for speed and low computational 
+    Performance: The balance between inference time and accuracy is crucial. While the MobileNetV2 architecture is optimized for speed and low computational 
                  requirements, I should also monitor inference time during deployment.
+
+5. Deployment
+
+    Streamlit Interface: I designed a user-friendly interface where users upload an image, and the system predicts its category. The prediction, and also that particular waste 
+                         can be recycled or not and if it can be recycled how it can be recycled, will be displayed.
+
+    Backend: The MobileNetV2 model will be loaded into the Streamlit app, and the uploaded image will be preprocessed before classification.
+
+6. Note
+    a. Code till model evaluation has been done in Final_code.ipynb file.
+    b. Code for streamlit has been given in streamlit_final.py file.
