@@ -1,4 +1,4 @@
-#Project title:- Waste Classification for Smart Bins
+# Project title:- Waste Classification for Smart Bins
 
 1. Data Collection
 
