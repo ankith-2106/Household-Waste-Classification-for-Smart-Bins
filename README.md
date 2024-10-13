@@ -2,7 +2,7 @@
 
 # 1. *Data Collection*
 
-    *Task*: I gathered images of household waste of 29 different categories, with around 700-1200 images per category.
+    # Task: I gathered images of household waste of 29 different categories, with around 700-1200 images per category.
           The categories for my project were as folows,
             AEROSOL CANS
             ALUMINUM FOOD CAN
