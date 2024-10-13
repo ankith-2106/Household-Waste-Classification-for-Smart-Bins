@@ -75,6 +75,6 @@
 
     *Backend*: The MobileNetV2 model will be loaded into the Streamlit app, and the uploaded image will be preprocessed before classification.
 
-#6. *Note*
+# 6. *Note*
     a. Code till model evaluation has been done in Final_code.ipynb file.
     b. Code for streamlit has been given in streamlit_final.py file.
